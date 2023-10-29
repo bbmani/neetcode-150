@@ -1,12 +1,10 @@
 def isAnagram(s,t) : 
-    s = list(s)
-    t = list(t)
+    s = sorted(list(s))
+    t = sorted(list(t))
     
-    for x in t : 
-        if x in s :
-            s.pop(s.index(x))
-            
-    return len(s) == 0
+    return s == t
+    
+    
 
 def main():
 	questions = [["anagram","nagaram"], ["rat", "car"]]
