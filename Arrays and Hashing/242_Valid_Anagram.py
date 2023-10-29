@@ -1,9 +1,10 @@
 def isAnagram(s,t) : 
-    s = sorted(list(s))
-    t = sorted(list(t))
-    
-    return s == t
-    
+    if len(s) != len(t) :
+        return False
+    for x in set(s) : 
+        if s.count(x) != t.count(x) : 
+            return False
+    return True
     
 
 def main():
